@@ -1,0 +1,46 @@
+name: 機能追加(form版)
+description: "form版"
+title: "[機能追加]: <案件名>"
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        以下、ルールに従って記載してください
+  - type: input
+    id: wrike-url
+    attributes:
+      label: "wrike URL"
+      description: wrikeのURLを貼り付けてください
+      placeholder: https://www.wrike.com/open.htm?id=1234567890
+    validations:
+      required: true
+  - type: textarea
+    id: contents
+    attributes:
+      label: 対応内容
+      description: 対応する内容を記載してください
+      placeholder: "- datasetの追加"
+    validations:
+      required: true
+  - type: checkboxes
+    id: check-wrike
+    attributes:
+      label: wrikeのURLは貼り付けましたか？
+      options:
+        - label: 貼り付けた
+          required: true
+  - type: checkboxes
+    id: check-contents
+    attributes:
+      label: 記載内容は適切ですか？
+      options:
+        - label: 適切である
+          required: true
+  - type: checkboxes
+    id: check-assignee
+    attributes:
+      label: 適切な対応者は設定していますか？
+      options:
+        - label: 設定した
+          required: true
