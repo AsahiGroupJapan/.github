@@ -1,0 +1,63 @@
+name: ドキュメント更新(form版)
+description: form版
+title: "[ドキュメント更新]:＜案件名＞"
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        以下、ルールに従って記載してください
+  - type: input
+    id: wrike-url
+    attributes:
+      label: "wrike URL"
+      description: wrikeのURLを貼り付けてください
+      placeholder: https://www.wrike.com/open.htm?id=1234567890
+    validations:
+      required: true
+  - type: textarea
+    id: overview
+    attributes:
+      label: 概要、業務影響
+      description: 概要及び業務影響やステークホルダーを記載します
+      placeholder: " - hoge システムの fuga 手順を変更\n - 〜事業部の企画業務全般に影響"
+    validations:
+      required: true
+  - type: textarea
+    id: target
+    attributes:
+      label: 対象ドキュメント
+      description: 更新対象ドキュメントを列挙します
+      placeholder: " - 1.0 目次\n - 1.10 fuga"
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: 対応内容
+      description: 対応内容を記載します
+      placeholder: " - fuga 手順追加\n - fuga 手順更新"
+    validations:
+      required: true
+  - type: textarea
+    id: tips
+    attributes:
+      label: 特記事項
+      description: 補記すべき内容があれば記載します
+      placeholder: " - 修正後、〜事業部のレビューが必要"
+    validations:
+      required: true
+  - type: checkboxes
+    id: announcement
+    attributes:
+      label: ステークホルダーにアナウンスしましたか？
+      options:
+        - label: アナウンスした
+          required: true
+  - type: checkboxes
+    id: assignee
+    attributes:
+      label: 担当者(assignee)は適切ですか？
+      options:
+        - label: 適切である
+          required: true
