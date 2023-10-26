@@ -2,8 +2,7 @@
 
 関連する issue の番号を`#`に続けて記載します   
 なおCloseの後ろに#issuesの番号を加えることでPRのクローズに合わせてIssueもクローズされるようになります。   
-close #
-
+例）close #issues
 
 ## 特記事項
 
